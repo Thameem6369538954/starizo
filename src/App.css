@@ -1,0 +1,13 @@
+
+@font-face{
+    font-family: "heading";
+    src: url("/public/Fonts/Saudagar.ttf") format("truetype"); /* Update the path */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+    font-family: "para";
+    src: url("/public/Fonts/Raleway-VariableFont_wght.ttf") format("truetype"); /* Update the path */
+  font-weight: normal;
+  font-style: normal;
+}
