@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BG from "../Images/HeaderBg.jpg";
+import BGN from "../Images/Bg.png";
 
 const Header = () => {
   return (
@@ -30,7 +31,7 @@ const Header = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.2 }}
-            className="mt-4 bg-yellow-500 text-black px-5 font-[para] sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-yellow-600 transition"
+            className="mt-4 bg-white text-yellow-600 px-5 font-[para] sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-yellow-600 transition"
           >
             Learn More
           </motion.button>
@@ -44,7 +45,7 @@ const Header = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <img
-            src="../Images/HdrImg.png"
+            src={BGN}
             alt="Rice Illustration"
             className="w-3/4 sm:w-2/3 md:w-full max-w-md"
           />

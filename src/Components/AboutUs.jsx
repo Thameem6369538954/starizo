@@ -1,13 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import For from "../Images/For.jpg"; // Replace with your actual image
+import For from "../Images/For.png"; // Replace with your actual image
+import Fora from "../Images/yellow-rice-seeds-cup-concrete.jpg"; // Replace with your actual image
 
 const AboutUs = () => {
   return (
-    <div className="bg-white py-16 px-6 md:px-12">
+    <div className="bg-white py-16 px-6 md:px-12 bg-center bg-cover "
+    style={{backgroundImage:`url(${Fora})`}}
+    >
       {/* Heading */}
       <motion.h1
-        className="lg:text-6xl tracking-wide font-bold text-center text-gray-800 mb-8 font-[Heading]"
+        className="lg:text-6xl tracking-wide font-bold text-center text-gray-800  font-[Heading]"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -16,14 +19,15 @@ const AboutUs = () => {
       </motion.h1>
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
         <motion.div
-          className="text-gray-700 space-y-4 font-[para]"
+          className="mt-12 bg-[#fffac0] shadow-lg rounded-lg p-6 md:p-8 max-w-7xl mx-auto font-[para]"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
+          <h1 className="font-[Hdga] text-6xl ">Our Starizo</h1>
           <p className="leading-relaxed text-lg">
             At Starizo, rice becomes more than just a grain; it is transformed into a global catalyst
             for innovation and industry excellence.
@@ -41,17 +45,19 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <img src={For} alt="About Us" className="rounded-lg shadow-lg w-full max-w-md" />
+          <img src={For} alt="About Us" className=" w-full max-w-5xl" />
         </motion.div>
       </div>
 
       {/* More Info */}
       <motion.div
-        className="mt-12 bg-white shadow-lg rounded-lg p-6 md:p-8 max-w-4xl mx-auto font-[para]"
+        className="mt-12 bg-[#fffac0] shadow-lg rounded-lg p-6 md:p-8 max-w-7xl mx-auto font-[para]"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
+                  <h1 className="font-[Hdga] text-6xl "> Paddy Power</h1>
+
         <p className="text-gray-700 text-lg leading-relaxed">
           With 50 years of experience in paddy farming and 15 years in producing high-quality rice
           varieties under the Cauvery brand, we are now expanding our value chain.
