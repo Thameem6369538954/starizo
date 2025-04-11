@@ -3,6 +3,8 @@ import PA from "../Images/PA.jpg";
 import PB from "../Images/PB.jpg";
 import PC from "../Images/PC.jpg";
 import PD from "../Images/PD.jpg";
+import AS from "../Images/GM.jpg";
+
 import { motion } from "framer-motion";
 const products = [
   {
@@ -44,16 +46,20 @@ const products = [
 
 export default function ProductGrid() {
   return (
-    <div>
+    <div 
+    className="min-h-screen bg-cover bg-center"
+
+    style={{ backgroundImage: `url(${AS})` }}
+    >
 <motion.h1
-                className="lg:text-6xl tracking-wide font-bold text-center text-gray-800 mb-8 font-[Heading]"
+                className="lg:text-6xl tracking-wide font-bold text-center text-gray-800 p-5 font-[Heading]"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 Our <span className="text-[#fdc700]">Products</span>
               </motion.h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:p-10 p-3 bg-white font-[para]">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:p-10 p-3 font-[para]">
       {products.map((product) => (
         <a
           key={product.id}

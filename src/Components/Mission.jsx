@@ -1,16 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import As from "../Images/HH.jpg"
 
 const VisionMissionValues = () => {
   return (
-    <div className="px-6 md:px-12 lg:px-24 py-12 bg-white font-[para]">
+    <div
+  className="px-6 md:px-12 lg:px-24 py-12 bg-white font-[para] bg-fixed bg-cover bg-center"
+  style={{ backgroundImage: `url(${As})` }}
+>
+
          <motion.h1
-                className="lg:text-6xl tracking-wide font-bold text-center text-gray-800 mb-8 font-[Heading]"
+                className="lg:text-6xl tracking-wide font-bold text-center text-[#fdc700]   mb-8 font-[Heading]"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                VISION & <span className="text-[#fdc700]">Mission</span>
+              <span className="text-8xl" >V</span>ISION <span className="text-white">& </span><span className="text-gray-800"> <span className="text-8xl">M</span>ission</span>
               </motion.h1>
         
       {/* Vision & Mission Section */}
