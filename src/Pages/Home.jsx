@@ -7,11 +7,13 @@ import InfoSection from '../Components/InfoSection'
 import BrandShowcase from "../Components/BrandShowcase"
 import Cate from "../Components/Cate"
 import ContactUs from '../Components/ContactUs'
+import TMBioEnergy from '../Components/TMBioEnergy'
 const Home = () => {
   return (
     <div>
       <Header />
       <AboutUs />
+      <TMBioEnergy />
       <VisionMission />
       <Cate />
       <Infrastructure />

@@ -1,9 +1,19 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function ContactUs() {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-[para]">
+         <motion.h1
+        className="lg:text-8xl tracking-wide font-bold text-center text-gray-800 mb-7 font-[Heading]"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        GET IN  <span className="text-[#fdc700]">TOUCH
+        </span>
+      </motion.h1>
       {/* Contact Section */}
       <div className="flex flex-col md:flex-row justify-between items-center px-5 md:px-10 py-10 md:py-16 gap-10">
         {/* Left Section */}

@@ -4,7 +4,7 @@ import logo from "../Images/logo.png"
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-10 px-6 md:px-20 border-t border-gray-200">
+    <footer className="bg-white py-10 px-6 md:px-20 border-t border-gray-200 font-[para]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-gray-700">
         
         {/* Logo & Copyright */}

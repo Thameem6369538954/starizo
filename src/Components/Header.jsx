@@ -21,7 +21,7 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[Heading] leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[heading] leading-tight">
             Harnessing Rice{" "}
             <span className="text-yellow-400">Sustainably</span>
           </h1>
