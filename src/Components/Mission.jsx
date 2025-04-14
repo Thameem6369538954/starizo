@@ -10,12 +10,12 @@ const VisionMissionValues = () => {
 >
 
          <motion.h1
-                className="lg:text-8xl tracking-wide font-bold text-center text-[#fdc700]   mb-8 font-[Heading]"
+                className="text-5xl md:text-8xl tracking-wide font-bold text-center text-[#fdc700]   mb-8 font-[Heading]"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-              <span className="text-8xl" >V</span>ISION <span className="text-white">& </span><span className="text-gray-800"> <span className="text-8xl">M</span>ission</span>
+              VISION <span className="text-white">& </span><span className="text-gray-800"> Mission</span>
               </motion.h1>
         
       {/* Vision & Mission Section */}

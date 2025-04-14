@@ -1,84 +1,153 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import SyrupImg from "../Images/GM.jpg"; // Replace with actual image path
+import Ak from "../Images/tahini-sesame-seeds-dark-background.jpg";
 
-export default function HighMaltoseRiceSyrupSection() {
+export default function SplitSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const cards = [
+    {
+      title: "Key Details",
+      desc: "Source: Non-GMO rice, allergen-free, vegan.",
+    },
+    {
+      title: "High Solubility",
+      desc: "Balanced hydrophilic/hydrophobic amino acid profile.",
+    },
+    {
+      title: "Functional Properties",
+      desc: "Emulsification, foaming, water/oil retention.",
+    },
+    {
+      title: "Health Benefits",
+      desc: "Supports muscle recovery, cardiac health, and weight management.",
+    },
+    {
+      title: "Applications",
+      desc: "Protein bars, shakes, anti-diabetic foods, and meals for muscle maintenance.",
+    },
+    {
+      title: "Technical Specs",
+      desc: "≥80% protein content, pH: 6.5–7.5, Particle Size: 200–300 mesh.",
+    },
+  ];
+
+  // Function to handle modal toggle
+  const handleModalToggle = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
-    <div className="font-[para] p-8 mt-60">
-      {/* Top Section - Image + Text */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        {/* Left - Image */}
+    <div className="font-[para]">
+      {/* Hero Section */}
+      <div
+        className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${Ak})` }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-gray-300 h-72 md:h-96 flex items-center justify-center"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative text-center text-white px-6 md:px-20 z-10"
         >
-          <img src={SyrupImg} alt="High Maltose Rice Syrup" className="object-cover h-full w-full" />
-        </motion.div>
-
-        {/* Right - Text */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-gray-800 text-white p-10 flex flex-col justify-center relative"
-        >
-          <div className="absolute top-6 right-6 w-4 h-4 rounded-full bg-yellow-400" />
-          <h2 className="text-3xl font-bold mb-4">STARlZ0<sup>®</sup> High Maltose Rice Syrtp</h2>
-          <p className="text-gray-300 leading-relaxed">
-            <span className="text-yellow-400 font-bold block mb-2">Re@efining Sweetening Solutions</span>
-          </p>
-          <div className="absolute bottom-6 left-6 w-4 h-4 rounded-full bg-yellow-400" />
+          <motion.h2
+            initial={{ scale: 0.8 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            STARIZO® Rice Protein
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="text-lg md:text-xl max-w-3xl mx-auto"
+          >
+            Plant-Powered Nutrition, Uncompromised Performance – premium rice
+            protein concentrate with 80% protein content for health and
+            functionality.
+          </motion.p>
         </motion.div>
       </div>
 
-      {/* Key Details Section */}
+      {/* Cards Section */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="bg-gray-100 p-8 rounded-lg shadow-md mt-12 space-y-8"
+        className="bg-gray-100 py-16 px-6 md:px-20"
+        initial="hidden"
+        whileInView="visible"
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
       >
-        {/* Key Details */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Key Details:</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li><span className="font-semibold">Composition:</span> Derived from non-GMO rice starch via enzymatic hydrolysis.</li>
-            <li><span className="font-semibold">Appearance:</span> Colorless, transparent syrup with honey-like notes.</li>
-          </ul>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-yellow-400 transition-transform hover:-translate-y-2 hover:shadow-2xl"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-base">{card.desc}</p>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Key Attributes */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Key Attributes:</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li><span className="font-semibold">Reduced Sweetness:</span> 30–40% lower sweetness vs. sucrose.</li>
-            <li><span className="font-semibold">Functional Benefits:</span> Humectancy, freezing point depression, low GI (glycemic index).</li>
-          </ul>
-        </div>
-
-        {/* Applications */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Applications:</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li><span className="font-semibold">Confectionery:</span> Reduces crystallization in candies.</li>
-            <li><span className="font-semibold">Bakery:</span> Extends freshness in breads and cakes.</li>
-            <li><span className="font-semibold">Dairy:</span> Enhance texture in ice creams and flavoured yogurts.</li>
-            <li><span className="font-semibold">Brewery:</span> Fermentable sugar for reduced-calorie beverages.</li>
-          </ul>
-        </div>
-
-        {/* Technical Specs */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Technical Specifications:</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li><span className="font-semibold">Maltose Content:</span> 40 - 85</li>
-            <li><span className="font-semibold">Dextrose Equivalent (DE):</span> 40 - 55</li>
-            <li><span className="font-semibold">Moisture:</span> ≤20%</li>
-          </ul>
+        {/* Button to Open Modal */}
+        <div className="text-center mt-8">
+          <motion.button
+            className="px-6 py-3 bg-yellow-400 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
+            onClick={handleModalToggle}
+          >
+            Learn More
+          </motion.button>
         </div>
       </motion.div>
+
+      {/* Full Page Modal */}
+      {isModalOpen && (
+        <motion.div
+          className="fixed inset-0 bg-black/60 flex justify-center items-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            className="bg-white p-10 w-full h-full overflow-auto max-w-full"
+            initial={{ y: -30 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="text-3xl font-semibold mb-6 text-gray-800">More Details</h3>
+            <p className="text-xl text-gray-700 mb-6">
+              Here’s more info about the STARIZO® Rice Protein, including
+              nutritional breakdown, sourcing details, and benefits for your
+              health and performance.
+            </p>
+            <div className="flex justify-end">
+              <motion.button
+                className="px-6 py-3 bg-yellow-400 text-white font-semibold rounded-md hover:bg-yellow-500 transition"
+                onClick={handleModalToggle}
+              >
+                Close
+              </motion.button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 }

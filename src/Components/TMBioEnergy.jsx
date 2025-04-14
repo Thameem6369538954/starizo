@@ -8,12 +8,12 @@ const StarizoOverview = () => {
   >
       <div className="max-w-7xl mx-auto">
         <motion.h2
-          className="lg:text-8xl tracking-wide font-bold text-center  font-[Heading] text-[#fdc700] "
+          className="text-5xl md:text-8xl tracking-wide font-bold text-center  font-[Heading] text-[#fdc700] "
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-         <span className="text-black"><span className="text-8xl" >T</span>M Bio</span>  <span className="" >Energy Initiative</span>
+         <span className="text-black">TM Bio</span>  <span className="" >Energy Initiative</span>
         </motion.h2>
 
         <motion.p

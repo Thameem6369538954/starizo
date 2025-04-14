@@ -10,7 +10,7 @@ const AboutUs = () => {
     >
       {/* Heading */}
       <motion.h1
-        className="lg:text-8xl tracking-wide font-bold text-center text-gray-800  font-[Heading]"
+        className="text-5xl md:text-8xl tracking-wide font-bold text-center text-gray-800  font-[Heading]"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

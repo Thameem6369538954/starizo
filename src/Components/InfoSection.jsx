@@ -4,7 +4,7 @@ import AA from "../Images/Formulation.jpg"
 import AB from "../Images/closeup-mixed-rice.jpg"
 const AnimatedComponent = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 font-[para]">
       <motion.div
         className="grid md:grid-cols-2 gap-10 items-start"
         initial={{ opacity: 0, y: 50 }}
@@ -36,7 +36,7 @@ const AnimatedComponent = () => {
               "Application of functional ingredients"
             ].map((item, i) => (
               <li key={i} className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-500" /> {item}
+                 {item}
               </li>
             ))}
           </ul>
@@ -53,7 +53,7 @@ const AnimatedComponent = () => {
             className="w-full h-40 object-cover rounded-lg mb-3"
           />
           <h2 className="text-green-700 text-2xl font-bold flex items-center gap-2">
-            <FaCheckCircle /> COMPLIANCES & DECLARATIONS
+            COMPLIANCES & DECLARATIONS
           </h2>
           <ul className="mt-2 space-y-2 text-gray-700">
             {[
@@ -67,7 +67,7 @@ const AnimatedComponent = () => {
               "Cross-Contamination Management Statement"
             ].map((item, i) => (
               <li key={i} className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-500" /> {item}
+                 {item}
               </li>
             ))}
           </ul>

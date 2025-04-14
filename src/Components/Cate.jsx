@@ -1,20 +1,22 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import PA from "../Images/PA.jpg";
-import PB from "../Images/PB.jpg";
-import PC from "../Images/PC.jpg";
-import PD from "../Images/PD.jpg";
-import AS from "../Images/GM.jpg";
+import PA from "../Images/stro.png";
+import PB from "../Images/stroa.png";
+import PC from "../Images/strob.png";
+import PD from "../Images/stroc.png";
+import AS from "../Images/strod.png";
+import AD from "../Images/stroe.png";
+import bg from "../Images/bg.jpg";
 
 const products = [
   {
     id: 1,
-    image: PA,
+    image: PB,
     title: "Rice Protein Concentrate (80% Protein)",
     location: "Plant-Powere@ Nutrition, Uncompromise@ Performance",
     date: "Specifications: (Chemical & Physical)",
@@ -22,7 +24,7 @@ const products = [
   },
   {
     id: 2,
-    image: PB,
+    image: PC,
     title: "Rice Maltodextrin",
     location: "The Multi-Functional Workhorse",
     date: "Specifications: (Chemical & Physical)",
@@ -30,15 +32,15 @@ const products = [
   },
   {
     id: 3,
-    image: PC,
-    title: "High Maltose Rice Syrtp",
+    image: AS,
+    title: "High Maltose Rice Syrup",
     location: "Redefining Sweetening Solutions",
     date: "Specifications: (Chemical & Physical)",
     link: "/HighMaltoseRiceSyrupSection",
   },
   {
     id: 4,
-    image: PD,
+    image: PA,
     title: "Rice Starch",
     location: "The Clean-Label Texture Innovator",
     date: "Specifications: (Chemical & Physical)",
@@ -46,16 +48,16 @@ const products = [
   },
   {
     id: 5,
-    image: PA,
-    title: "Clarified Rice Syrtp",
+    image: PD,
+    title: "Clarified Rice Syrup",
     location: "Pure Sweetness, Enhanced Functionality",
     date: "Specifications: (Chemical & Physical)",
     link: "/ClarifiedSyrupSection",
   },
   {
     id: 6,
-    image: PA,
-    title: "lndtstry-Specific Solttions",
+    image: AD,
+    title: "lndtstry-Specific Solutions",
     location: "Tailored for Your Market",
     date: "Specifications: (Chemical & Physical)",
     link: "/IndustrySolutionsSection",
@@ -65,19 +67,21 @@ const products = [
 export default function ProductCarousel() {
   return (
     <div
-      className="min-h-screen py-20 px-4 bg-cover bg-center"
-      style={{ backgroundImage: `url(${AS})` }}
+      className="min-h-screen py-20 px-4 bg-cover bg-center font-[para]"
+      style={{ backgroundImage: `url(${bg})` }}
     >
-      <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-16 font-[Heading]">
+      <h1 className="text-4xl md:text-8xl font-bold text-center text-gray-800 mb-16 font-[Heading]">
         OUR <span className="text-[#fdc700]">PRODUCTS</span>
       </h1>
 
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        speed={800}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -88,17 +92,18 @@ export default function ProductCarousel() {
           <SwiperSlide key={product.id}>
             <a
               href={product.link}
-              className="group block bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group block bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 ease-in-out"
             >
-              <img
-                src={product.image}
-                alt={product.title}
-                className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="w-full h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
 
-              {/* Info Section */}
               <div className="p-5">
-                <h2 className="text-xl font-bold text-gray-800 mb-2">
+                <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
                   {product.title}
                 </h2>
                 <p className="text-sm text-gray-600 mb-4 line-clamp-3">

@@ -12,14 +12,14 @@ const Infrastructure = () => {
   return (
     <div className="p-6 bg-white text-gray-900 font-[para]">
       <motion.h1
-        className="lg:text-8xl tracking-wide font-bold text-center text-gray-800 mb-12 font-[Heading]"
+        className="text-4xl md:text-8xl tracking-wide font-bold text-center text-gray-800 mb-12 font-[Heading]"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <span className="text-8xl">O</span>UR{" "}
+        OUR{" "}
         <span className="text-[#fdc700]">
-          <span className="text-8xl">I</span>NFRASTRUCTURE
+          INFRASTRUCTURE
         </span>
       </motion.h1>
 

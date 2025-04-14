@@ -6,7 +6,7 @@ export default function ContactUs() {
   return (
     <div className="bg-white font-[para]">
          <motion.h1
-        className="lg:text-8xl tracking-wide font-bold text-center text-gray-800 mb-7 font-[Heading]"
+        className="text-5xl md:text-8xl tracking-wide font-bold text-center text-gray-800 mb-7 font-[Heading]"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -30,20 +30,20 @@ export default function ContactUs() {
           <div className="grid sm:grid-cols-2 gap-6">
             <div>
               <h4 className="font-semibold text-lg">Call Center</h4>
-              <p className="text-gray-600">800 100 975 20 34</p>
-              <p className="text-gray-600">+ (123) 1800 234 5678</p>
+              <p className="text-gray-600">+91 81411 66866</p>
             </div>
             <div>
               <h4 className="font-semibold text-lg">Our Location</h4>
-              <p className="text-gray-600">xxx,yyy - 1060</p>
-              <p className="text-gray-600">Str. First Avenue 1</p>
+              <p className="text-gray-600">21, C.V. Raman Road, Alwarpet,
+              Chennai-600 018,</p>
+              <p className="text-gray-600"> Tamilnadu, India.</p>
             </div>
           </div>
 
           {/* Email */}
           <div>
             <h4 className="font-semibold text-lg">Email</h4>
-            <p className="text-gray-600">neuros@mail.co</p>
+            <p className="text-gray-600">info@tmbioenergy.com</p>
           </div>
 
           {/* Social Links */}
