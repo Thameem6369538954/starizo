@@ -1,6 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom"; // ✅ Important
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -90,8 +92,8 @@ export default function ProductCarousel() {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <a
-              href={product.link}
+            <Link
+              to={product.link}
               className="group block bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 ease-in-out"
             >
               <div className="w-full h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden">
@@ -113,7 +115,7 @@ export default function ProductCarousel() {
                   {product.date}
                 </span>
               </div>
-            </a>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
