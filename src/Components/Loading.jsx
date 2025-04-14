@@ -27,7 +27,7 @@ const Loading = () => {
   return (
     <div className="fixed inset-0 z-50 bg-white flex items-center justify-center font-[Hdga]">
       <motion.div
-        className="flex space-x-1 text-8xl font-bold text-green-800"
+        className="flex space-x-1 text-4xl md:text-8xl font-bold text-green-800"
         variants={containerVariants}
         initial="initial"
         animate="animate"
