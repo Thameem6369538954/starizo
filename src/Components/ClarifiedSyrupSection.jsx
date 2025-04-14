@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import SyrupImg from "../Images/closeup-mixed-rice.jpg"; // replace with your actual image path
+import SyrupImg from "../Images/closeup-mixed-rice.jpg"; // Replace with your actual image path
 
 export default function ClarifiedSyrupSection() {
+  const [showModal, setShowModal] = useState(false);
+
   const cards = [
     {
       title: "Key Details",
@@ -59,7 +61,10 @@ export default function ClarifiedSyrupSection() {
   return (
     <div className="font-[para] mt-20">
       {/* Hero Section */}
-      <div className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: `url(${SyrupImg})` }}>
+      <div
+        className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${SyrupImg})` }}
+      >
         <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -112,7 +117,9 @@ export default function ClarifiedSyrupSection() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">{card.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                {card.title}
+              </h3>
               <ul className="list-disc list-inside space-y-2 text-gray-700 text-base">
                 {card.points.map((point, i) => (
                   <li key={i}>{point}</li>
@@ -125,12 +132,87 @@ export default function ClarifiedSyrupSection() {
         {/* Button Section */}
         <div className="text-center mt-8">
           <motion.button
+            onClick={() => setShowModal(true)}
             className="px-6 py-3 bg-yellow-400 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
           >
             Learn More
           </motion.button>
         </div>
       </motion.div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
+<div className="bg-white rounded-xl shadow-xl max-w-8xl w-full max-h-[90vh] overflow-y-auto p-6 relative">
+<button
+              className="absolute top-2 right-3 text-gray-600 hover:text-black text-4xl"
+              onClick={() => setShowModal(false)}
+            >
+              &times;
+            </button>
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
+              STARIZO® Clarified Rice Syrup – Product Data Sheet
+            </h3>
+
+            <div className="text-gray-700 space-y-4 text-base">
+              <h4 className="text-xl font-semibold">Specifications</h4>
+              <ul className="list-disc list-inside">
+                <li><strong>Appearance:</strong> Colourless thick viscous syrup</li>
+                <li><strong>pH (50% solution):</strong> 4.8 – 5.5</li>
+                <li><strong>Odor:</strong> Odorless</li>
+                <li><strong>Identification:</strong> Passes test</li>
+              </ul>
+
+              <h4 className="text-xl font-semibold">Microbiological</h4>
+              <ul className="list-disc list-inside">
+                <li>Total plate count: 1000 Max</li>
+                <li>Yeast/Mold: 10 Max</li>
+                <li>E. coli / Salmonella: Absent</li>
+              </ul>
+
+              <h4 className="text-xl font-semibold">Nutrition Information (per 100g)</h4>
+              <ul className="list-disc list-inside">
+                <li>Energy: 316 Kcal</li>
+                <li>Carbohydrates: 79g</li>
+                <li>Total Fat: &lt;0.1g | Sugar: 19g</li>
+                <li>Dietary Fiber: 0g | Trans Fat: 0g | Saturated Fat: &lt;0.1g</li>
+                <li>Cholesterol: 0mg | Sodium: &lt;10mg</li>
+              </ul>
+
+              <h4 className="text-xl font-semibold">Heavy Metals</h4>
+              <ul className="list-disc list-inside">
+                <li>Total Heavy Metals: 10 mg/kg Max</li>
+                <li>Arsenic: &lt;0.1 mg/kg | Lead: 0.05 mg/kg</li>
+                <li>Cadmium: 0.05 mg/kg | Mercury: 0.01 mg/kg</li>
+              </ul>
+
+              <h4 className="text-xl font-semibold">Applications</h4>
+              <p>
+                Used in ice cream, beverages, yoghurts, desserts, pharmacy,
+                biscuits, sauces, baby foods, cosmetics, bakery, and more.
+              </p>
+
+              <h4 className="text-xl font-semibold">Certifications To Be Acquired</h4>
+              <ol className="list-decimal list-inside">
+                <li>FSSC 22000: 2017</li>
+                <li>ISO 9001:2015</li>
+                <li>Halal-India/Indonesia</li>
+                <li>Kosher</li>
+                <li>FDA-IP/BP/USP</li>
+                <li>Non-GMO</li>
+                <li>NABL/ISO/IEC:2017 Accreditation</li>
+                <li>BRC</li>
+              </ol>
+
+              <h4 className="text-xl font-semibold">Regulations</h4>
+              <p>
+                Pesticide Residues: Complies with EC 396/2005<br />
+                Contaminants: Complies with EC 1881/2006
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -32,7 +32,6 @@ export default function SplitSection() {
     },
   ];
 
-  // Function to handle modal toggle
   const handleModalToggle = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -41,7 +40,7 @@ export default function SplitSection() {
     <div className="font-[para]">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
+        className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${Ak})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
@@ -49,13 +48,13 @@ export default function SplitSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative text-center text-white px-6 md:px-20 z-10"
+          className="relative text-center text-white px-4 md:px-20 z-10"
         >
           <motion.h2
             initial={{ scale: 0.8 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl md:text-5xl font-bold mb-4"
           >
             STARIZO® Rice Protein
           </motion.h2>
@@ -63,7 +62,7 @@ export default function SplitSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-lg md:text-xl max-w-3xl mx-auto"
+            className="text-base md:text-xl max-w-3xl mx-auto"
           >
             Plant-Powered Nutrition, Uncompromised Performance – premium rice
             protein concentrate with 80% protein content for health and
@@ -74,7 +73,7 @@ export default function SplitSection() {
 
       {/* Cards Section */}
       <motion.div
-        className="bg-gray-100 py-16 px-6 md:px-20"
+        className="bg-gray-100 py-16 px-4 md:px-20"
         initial="hidden"
         whileInView="visible"
         variants={{
@@ -85,11 +84,11 @@ export default function SplitSection() {
           },
         }}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-yellow-400 transition-transform hover:-translate-y-2 hover:shadow-2xl"
+              className="bg-white rounded-xl shadow-md p-6 border-t-4 border-yellow-400 transition-transform hover:-translate-y-2 hover:shadow-2xl"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
@@ -98,16 +97,16 @@ export default function SplitSection() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
                 {card.title}
               </h3>
-              <p className="text-gray-600 text-base">{card.desc}</p>
+              <p className="text-gray-600 text-sm md:text-base">{card.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Button to Open Modal */}
-        <div className="text-center mt-8">
+        {/* Button */}
+        <div className="text-center mt-10">
           <motion.button
             className="px-6 py-3 bg-yellow-400 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
             onClick={handleModalToggle}
@@ -117,36 +116,51 @@ export default function SplitSection() {
         </div>
       </motion.div>
 
-      {/* Full Page Modal */}
+      {/* Full Screen Modal */}
       {isModalOpen && (
-        <motion.div
-          className="fixed inset-0 bg-black/60 flex justify-center items-center z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <motion.div
-            className="bg-white p-10 w-full h-full overflow-auto max-w-full"
-            initial={{ y: -30 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-3xl font-semibold mb-6 text-gray-800">More Details</h3>
-            <p className="text-xl text-gray-700 mb-6">
-              Here’s more info about the STARIZO® Rice Protein, including
-              nutritional breakdown, sourcing details, and benefits for your
-              health and performance.
+        <div className="fixed inset-0 bg-black/50 z-50 flex justify-center items-center px-4 py-8 overflow-y-auto">
+          <div className="bg-white max-w-9xl w-full rounded-lg shadow-lg p-6 space-y-4 relative">
+            <button
+              onClick={handleModalToggle}
+              className="absolute top-3 right-4 text-gray-500 hover:text-black text-4xl"
+            >
+              &times;
+            </button>
+
+            <h4 className="text-2xl font-semibold">STARIZO® High Maltose Syrup</h4>
+            <p>Native Rice Starch derived from non-GMO Rice.</p>
+
+            <h5 className="text-lg font-semibold">Specifications:</h5>
+            <ul className="list-disc list-inside space-y-1 text-sm md:text-base">
+              <li><strong>Appearance:</strong> Colourless thick viscous syrup</li>
+              <li><strong>pH (50% solution):</strong> 4.8 – 5.5</li>
+              <li><strong>Odor:</strong> Odorless</li>
+              <li><strong>Identification:</strong> Passes test</li>
+              <li><strong>Total plate count:</strong> 1000 Max</li>
+              <li><strong>Yeast/Mold:</strong> 10 cfu/g Max</li>
+              <li><strong>E. coli & Salmonella:</strong> Absent</li>
+              <li><strong>Heavy Metals:</strong> Total ≤ 10 mg/kg (Arsenic ≤ 1, Lead ≤ 1, Cadmium ≤ 0.1, Mercury ≤ 0.05)</li>
+              <li><strong>Pesticides & Contaminants:</strong> Complies with EC 396/2005 & 1881/2006</li>
+            </ul>
+
+            <h5 className="text-lg font-semibold">Applications:</h5>
+            <p>
+              Used in confectionery, chewing gum, fudge, jellies, muesli bars, bakery glaze, and ice cream.
             </p>
-            <div className="flex justify-end">
-              <motion.button
-                className="px-6 py-3 bg-yellow-400 text-white font-semibold rounded-md hover:bg-yellow-500 transition"
-                onClick={handleModalToggle}
-              >
-                Close
-              </motion.button>
-            </div>
-          </motion.div>
-        </motion.div>
+
+            <h5 className="text-lg font-semibold">Certifications to be acquired:</h5>
+            <ol className="list-decimal list-inside space-y-1 text-sm md:text-base">
+              <li>FSSC 22000: 2017</li>
+              <li>ISO 9001:2015</li>
+              <li>Halal-India/Indonesia</li>
+              <li>Kosher</li>
+              <li>FDA-IP/BP/USP</li>
+              <li>Non-GMO</li>
+              <li>NABL/ISO/IEC:2017</li>
+              <li>BRC</li>
+            </ol>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Link } from "react-router-dom"; // ✅ Important
+import { Link, useNavigate } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -67,6 +67,14 @@ const products = [
 ];
 
 export default function ProductCarousel() {
+  const navigate = useNavigate();
+
+  // 🟡 Custom function to scroll to top and navigate
+  const handleProductClick = (link) => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top
+    navigate(link); // navigate after scroll
+  };
+
   return (
     <div
       className="min-h-screen py-20 px-4 bg-cover bg-center font-[para]"
@@ -92,9 +100,9 @@ export default function ProductCarousel() {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <Link
-              to={product.link}
-              className="group block bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 ease-in-out"
+            <div
+              onClick={() => handleProductClick(product.link)}
+              className="cursor-pointer group block bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 ease-in-out"
             >
               <div className="w-full h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden">
                 <img
@@ -115,7 +123,7 @@ export default function ProductCarousel() {
                   {product.date}
                 </span>
               </div>
-            </Link>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
