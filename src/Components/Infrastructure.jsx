@@ -18,7 +18,7 @@ const Infrastructure = () => {
         transition={{ duration: 0.8 }}
       >
         OUR{" "}
-        <span className="text-[#fdc700]">
+        <span className="text-[#fdc700] text-2xl md:text-8xl">
           INFRASTRUCTURE
         </span>
       </motion.h1>
