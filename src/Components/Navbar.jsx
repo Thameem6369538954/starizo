@@ -150,8 +150,16 @@ const Navbar = () => {
                     exit={{ opacity: 0, y: -10 }}
                     className="mt-2 ml-4 space-y-1"
                   >
-                    <Link to="/service1" className="block px-2 py-1 hover:bg-gray-100 rounded">Service 1</Link>
-                    <Link to="/service2" className="block px-2 py-1 hover:bg-gray-100 rounded">Service 2</Link>
+                    
+
+
+
+                    <Link to="/StarizoStarchCard" className="block px-2 py-1 hover:bg-gray-100 rounded">Rice Starch</Link>
+                  <Link to="/RiceProteinCard" className="block px-2 py-1 hover:bg-gray-100 rounded">Rice Protein Concentrate</Link>
+                  <Link to="/MaltoExtrin" className="block px-2 py-1 hover:bg-gray-100 rounded">MaltoExtrin</Link>
+                  <Link to="/ClarifiedSyrupSection" className="block px-2 py-1 hover:bg-gray-100 rounded">Clarified Syrup</Link>
+                  <Link to="/HighMaltoseRiceSyrupSection" className="block px-2 py-1 hover:bg-gray-100 rounded">High Maltose Rice Syrup</Link>
+                  <Link to="/IndustrySolutionsSection" className="block px-2 py-1 hover:bg-gray-100 rounded">Industry Solutions</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
