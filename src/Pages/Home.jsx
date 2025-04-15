@@ -17,7 +17,7 @@ const Home = () => {
       <VisionMission />
       <Cate />
       <Infrastructure />
-      <InfoSection />
+      {/* <InfoSection /> */}
       <BrandShowcase />
       <ContactUs />
     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Ak from "../Images/tahini-sesame-seeds-dark-background.jpg";
 
 export default function SplitSection() {
@@ -37,7 +37,7 @@ export default function SplitSection() {
   };
 
   return (
-    <div className="font-[para]">
+    <div className="font-[para] mt-30 ">
       {/* Hero Section */}
       <div
         className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center"
@@ -116,52 +116,94 @@ export default function SplitSection() {
         </div>
       </motion.div>
 
-      {/* Full Screen Modal */}
+      {/* Full Screen Modal */} 
+      <AnimatePresence>
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex justify-center items-center px-4 py-8 overflow-y-auto">
-          <div className="bg-white max-w-9xl w-full rounded-lg shadow-lg p-6 space-y-4 relative">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/50 z-50 flex justify-center items-center px-4 py-8 overflow-y-auto"
+        >
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 100, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-white max-w-9xl w-full rounded-2xl shadow-xl p-8 space-y-6 relative"
+          >
             <button
               onClick={handleModalToggle}
-              className="absolute top-3 right-4 text-gray-500 hover:text-black text-4xl"
+              className="absolute top-4 right-5 text-gray-500 hover:text-black text-4xl"
             >
               &times;
             </button>
 
-            <h4 className="text-2xl font-semibold">STARIZO® High Maltose Syrup</h4>
-            <p>Native Rice Starch derived from non-GMO Rice.</p>
-
-            <h5 className="text-lg font-semibold">Specifications:</h5>
-            <ul className="list-disc list-inside space-y-1 text-sm md:text-base">
-              <li><strong>Appearance:</strong> Colourless thick viscous syrup</li>
-              <li><strong>pH (50% solution):</strong> 4.8 – 5.5</li>
-              <li><strong>Odor:</strong> Odorless</li>
-              <li><strong>Identification:</strong> Passes test</li>
-              <li><strong>Total plate count:</strong> 1000 Max</li>
-              <li><strong>Yeast/Mold:</strong> 10 cfu/g Max</li>
-              <li><strong>E. coli & Salmonella:</strong> Absent</li>
-              <li><strong>Heavy Metals:</strong> Total ≤ 10 mg/kg (Arsenic ≤ 1, Lead ≤ 1, Cadmium ≤ 0.1, Mercury ≤ 0.05)</li>
-              <li><strong>Pesticides & Contaminants:</strong> Complies with EC 396/2005 & 1881/2006</li>
-            </ul>
-
-            <h5 className="text-lg font-semibold">Applications:</h5>
-            <p>
-              Used in confectionery, chewing gum, fudge, jellies, muesli bars, bakery glaze, and ice cream.
+            <h4 className="text-3xl font-bold text-gray-800">STARIZO® High Maltose Syrup</h4>
+            <p className="text-gray-600">
+              Rice High Maltose Syrup enzymatically hydrolyzed from non-GMO rice starch, this clear,
+              viscous syrup features a high maltose content and a balanced carbohydrate profile,
+              offering enhanced sweetness, reduced hygroscopicity, and excellent process stability.
             </p>
 
-            <h5 className="text-lg font-semibold">Certifications to be acquired:</h5>
-            <ol className="list-decimal list-inside space-y-1 text-sm md:text-base">
-              <li>FSSC 22000: 2017</li>
-              <li>ISO 9001:2015</li>
-              <li>Halal-India/Indonesia</li>
-              <li>Kosher</li>
-              <li>FDA-IP/BP/USP</li>
-              <li>Non-GMO</li>
-              <li>NABL/ISO/IEC:2017</li>
-              <li>BRC</li>
-            </ol>
-          </div>
-        </div>
+            <section>
+              <h5 className="text-xl font-semibold text-gray-700 mb-2">Specifications</h5>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                <ul className="space-y-1">
+                  <li><strong>Appearance:</strong> Colourless thick viscous syrup</li>
+                  <li><strong>pH (50% solution):</strong> 4.8 – 5.5</li>
+                  <li><strong>Odour:</strong> Odourless</li>
+                  <li><strong>Viscosity:</strong> NA</li>
+                  <li><strong>Identification:</strong> Passes test</li>
+                </ul>
+                <ul className="space-y-1">
+                  <li><strong>Total plate count:</strong> 1000 Max</li>
+                  <li><strong>Yeast (cfu/g):</strong> 10 Max</li>
+                  <li><strong>Mold (cfu/g):</strong> 10 Max</li>
+                  <li><strong>E. coli (per 10g):</strong> Absent</li>
+                  <li><strong>Salmonella (per 25g):</strong> Absent</li>
+                </ul>
+              </div>
+
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                <ul className="space-y-1">
+                  <li><strong>Total Heavy Metals:</strong> 10 mg/kg Max</li>
+                  <li><strong>Arsenic:</strong> 1 mg/kg Max</li>
+                  <li><strong>Lead:</strong> 1 mg/kg Max</li>
+                  <li><strong>Cadmium:</strong> 0.1 mg/kg Max</li>
+                  <li><strong>Mercury:</strong> 0.05 mg/kg Max</li>
+                </ul>
+                <ul className="space-y-1">
+                  <li><strong>Pesticide Residues:</strong> Complies with EC 396/2005</li>
+                  <li><strong>Contaminants:</strong> Complies with EC 1881/2006</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h5 className="text-xl font-semibold text-gray-700 mt-6 mb-2">Applications</h5>
+              <p className="text-gray-600 text-sm">
+                Used in food such as Confectionery - Caramel and Toffees, Chewing Gum, Fudge and Fondants, Gums and Jellies, High Boiling’s, Muesli Bars and Nougats, Bakery Glaze, Ice-Cream.
+              </p>
+            </section>
+
+            <section>
+              <h5 className="text-xl font-semibold text-gray-700 mt-6 mb-2">Certifications to be Acquired</h5>
+              <ol className="list-decimal list-inside text-sm text-gray-600 space-y-1">
+                <li>FSSC 22000: 2017</li>
+                <li>ISO 9001:2015</li>
+                <li>Halal-India/Indonesia</li>
+                <li>Kosher</li>
+                <li>FDA-IP/BP/USP</li>
+                <li>Non-GMO</li>
+                <li>NABL/ISO/IEC:2017 Accreditation</li>
+                <li>BRC</li>
+              </ol>
+            </section>
+          </motion.div>
+        </motion.div>
       )}
+    </AnimatePresence>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import RiceImg from "../Images/Bg.png";
+import { X } from "lucide-react";
 
 export default function RiceMaltodextrinSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,7 +46,7 @@ export default function RiceMaltodextrinSection() {
   ];
 
   return (
-    <div className="font-[para]">
+    <div className="font-[para]  mt-30 ">
       {/* Hero Section */}
       <div
         className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
@@ -128,129 +129,138 @@ export default function RiceMaltodextrinSection() {
 
       {/* Modal */}
       {isModalOpen && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
-        >
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 max-h-[100vh] overflow-y-auto w-full max-w-9xl mx-4"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-          >
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">
-              STARIZO® Rice Maltodextrin – Technical Data Sheet
-            </h2>
+       <motion.div
+       initial={{ opacity: 0, scale: 0.8 }}
+       animate={{ opacity: 1, scale: 1 }}
+       exit={{ opacity: 0, scale: 0.8 }}
+       className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+     >
+      
+       <motion.div
+         className=" relative bg-white rounded-xl shadow-lg p-6 max-h-[90vh] overflow-y-auto w-full max-w-5xl mx-4"
+         initial={{ scale: 0.8 }}
+         animate={{ scale: 1 }}
+         exit={{ scale: 0.8 }}
+       >
+        <button
+  onClick={() => setIsModalOpen(false)}
+  className="absolute top-4 right-4 text-gray-600 hover:text-red-500 transition"
+  aria-label="Close"
+>
+  <X size={24} />
+</button>
 
-            <div className="text-sm text-gray-700 space-y-4">
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Physical Chemical</h3>
-                <ul className="list-disc list-inside">
-                  <li>Appearance: White free flowing powder</li>
-                  <li>Moisture (%): 5.00 Max</li>
-                  <li>pH (10% w/v solution): 4.5 – 6.5</li>
-                  <li>Dextrose equivalent: 10 – 20%</li>
-                  <li>Identification: Passes test</li>
-                </ul>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Microbiological</h3>
-                <ul className="list-disc list-inside">
-                  <li>Total plate count: 500 cfu/g Max</li>
-                  <li>Yeast: 20 cfu/g</li>
-                  <li>Mold: 20 cfu/g</li>
-                  <li>E. coli (per 10g): Absent</li>
-                  <li>Coliforms MPN: 30</li>
-                  <li>Salmonella/25g: Absent</li>
-                  <li>S. Aureus/g: Absent</li>
-                </ul>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Nutrition Information (per 100g)</h3>
-                <ul className="list-disc list-inside">
-                  <li>Energy: 381 Kcal</li>
-                  <li>Total Carbohydrates: 95g</li>
-                  <li>Sugar: 29g</li>
-                  <li>Protein: 0.1g</li>
-                  <li>Total Fat: 0g</li>
-                  <li>Cholesterol: 0mg</li>
-                  <li>Sodium: 30.5mg</li>
-                  <li>Potassium: &lt;4mg</li>
-                </ul>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Heavy Metals</h3>
-                <ul className="list-disc list-inside">
-                  <li>Total Heavy Metals: 10 mg/kg Max</li>
-                  <li>Arsenic: 0.2 mg/kg Max</li>
-                  <li>Lead: 0.02 mg/kg Max</li>
-                  <li>Cadmium: 0.01 mg/kg Max</li>
-                  <li>Mercury: 0.02 mg/kg Max</li>
-                  <li>Aluminum: 1 mg/kg Max</li>
-                  <li>Phosphorous: 100 mg/kg Max</li>
-                  <li>Magnesium: 20 mg/kg Max</li>
-                  <li>Iron: 1 mg/kg Max</li>
-                  <li>Copper: 1 mg/kg Max</li>
-                </ul>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Applications</h3>
-                <p>
-                  Baby Food, Baked Goods, Beers, Lagers, Condiments, Desserts, Energy Shots, Energy Drinks, Infant Foods, Medicines, Non-Dairy Frozen Treats, Powdered Beverages, Sauces, Spices.
-                </p>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Regulations & Compliance</h3>
-                <ul className="list-disc list-inside">
-                  <li>FCC Maltodextrin</li>
-                  <li>US Code of Federal Regulations: 21 CFR 184.1444</li>
-                  <li>GB/T 20882.6 – FSSAI/FDA</li>
-                  <li>Pesticide Residues: Complies with EC 396/2005</li>
-                  <li>Contaminants: Complies with EC 1881/2006</li>
-                </ul>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Certifications (To Be Acquired)</h3>
-                <ul className="list-disc list-inside">
-                  <li>FSSC 22000: 2017</li>
-                  <li>ISO 9001:2015</li>
-                  <li>Halal – India / Indonesia</li>
-                  <li>Kosher</li>
-                  <li>FDA – IP/BP/USP</li>
-                  <li>Non-GMO</li>
-                  <li>NABL / ISO / IEC: 2017 Accreditation</li>
-                  <li>BRC</li>
-                </ul>
-              </section>
-
-              <section>
-                <h3 className="font-semibold text-lg mb-1">Contact Info</h3>
-                <p>
-                  <strong>Thirumavadi Bio Energy</strong><br />
-                  21, C.V. Raman Road, Alwarpett, Chennai–600 018, Tamilnadu, India. <br />
-                  Email: info@tmbioenergy.com <br />
-                  Phone: +91 81411 66866 <br />
-                  Website: <a href="http://www.starizo.com" target="_blank" className="text-blue-600 underline">www.starizo.com</a>
-                </p>
-              </section>
-            </div>
-
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="mt-6 px-5 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 transition"
-            >
-              Close
-            </button>
-          </motion.div>
-        </motion.div>
+         <h2 className="text-2xl font-bold mb-4 text-gray-800">
+           STARIZO® Rice Maltodextrin – Technical Data Sheet
+         </h2>
+ 
+         <p className="mb-4 text-sm text-gray-700">
+           Rice Maltodextrin derived from non-GMO rice starch through partial
+           hydrolysis, our maltodextrin delivers a versatile functional
+           carbohydrate profile, ideal for applications requiring mild sweetness,
+           improved texture, and solubility.
+         </p>
+ 
+         <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-700">
+           {/* Specifications */}
+           <div>
+             <h3 className="font-semibold text-lg mb-2">Specifications</h3>
+ 
+             <h4 className="font-semibold mb-1">Physical Chemical:</h4>
+             <ul className="list-disc list-inside mb-3">
+               <li>Appearance: White free flowing powder</li>
+               <li>Moisture: 5.00 Max</li>
+               <li>pH (10% w/v solution): 4.5 – 6.5</li>
+               <li>Dextrose equivalent: 10 – 20%</li>
+               <li>Identification: Passes test</li>
+             </ul>
+ 
+             <h4 className="font-semibold mb-1">Microbiological:</h4>
+             <ul className="list-disc list-inside mb-3">
+               <li>Total plate count: 500 cfu/g Max</li>
+               <li>Yeast: 20 cfu/g Max</li>
+               <li>Mold: 20 cfu/g Max</li>
+               <li>E. coli: Absent</li>
+               <li>Coli Forms MPN: 30</li>
+               <li>Salmonella (25g): Absent</li>
+               <li>S. Aureus: Absent</li>
+             </ul>
+ 
+             <h4 className="font-semibold mb-1">Nutrition Information:</h4>
+             <ul className="list-disc list-inside mb-3">
+               <li>Energy: 381 Kcal</li>
+               <li>Carbohydrates: 95 g</li>
+               <li>Sugar: 29 g</li>
+               <li>Protein: 0.1 g</li>
+               <li>Total Fat: 0 g</li>
+               <li>Cholesterol: 0 mg</li>
+               <li>Sodium: 30.5 mg</li>
+               <li>Potassium: &lt;4 mg</li>
+             </ul>
+ 
+             <h4 className="font-semibold mb-1">Heavy Metals Value:</h4>
+             <ul className="list-disc list-inside">
+               <li>Total Heavy Metals: 10 mg/kg Max</li>
+               <li>Arsenic: 0.2 mg/kg Max</li>
+               <li>Lead: 0.02 mg/kg Max</li>
+               <li>Cadmium: 0.01 mg/kg Max</li>
+               <li>Mercury: 0.02 mg/kg Max</li>
+               <li>Aluminum: 1 mg/kg Max</li>
+               <li>Phosphorous: 100 mg/kg Max</li>
+               <li>Magnesium: 20 mg/kg Max</li>
+               <li>Iron: 1 mg/kg Max</li>
+               <li>Copper: 1 mg/kg Max</li>
+             </ul>
+           </div>
+ 
+           {/* Applications and Regulations */}
+           <div>
+             <h3 className="font-semibold text-lg mb-2">Applications</h3>
+             <ul className="list-disc list-inside mb-4">
+               <li>Baby Food</li>
+               <li>Baked Goods</li>
+               <li>Beers, Lagers</li>
+               <li>Condiments, Desserts</li>
+               <li>Energy Shots/Drinks</li>
+               <li>Infant Foods, Medicines</li>
+               <li>Non-Dairy Frozen Treats</li>
+               <li>Powdered Beverages</li>
+               <li>Sauces, Spices</li>
+             </ul>
+ 
+             <h4 className="font-semibold mb-1">Legislation / Specific Regulations:</h4>
+             <ul className="list-disc list-inside mb-4">
+               <li>FCC Maltodextrin</li>
+               <li>US CFR: 21 CFR 184.1444</li>
+               <li>GB/T 20882.6 – FSSAI / FDA</li>
+             </ul>
+ 
+             <h4 className="font-semibold mb-1">Pesticide Residues:</h4>
+             <p className="mb-2">
+               Complies with regulation (EC) 396/2005, as amended.
+             </p>
+ 
+             <h4 className="font-semibold mb-1">Contaminants:</h4>
+             <p className="mb-2">
+               Complies with regulation (EC) 1881/2006, as amended.
+             </p>
+ 
+             <h4 className="font-semibold mb-1">Certifications: To Be Acquired</h4>
+             <ul className="list-disc list-inside">
+               <li>FSSC 22000: 2017</li>
+               <li>ISO 9001:2015</li>
+               <li>Halal - India / Indonesia</li>
+               <li>Kosher</li>
+               <li>FDA-IP/BP/USP</li>
+               <li>Non-GMO</li>
+               <li>NABL / ISO / IEC: 2017</li>
+               <li>BRC</li>
+             </ul>
+           </div>
+         </div>
+       </motion.div>
+     </motion.div>
+ 
       )}
     </div>
   );

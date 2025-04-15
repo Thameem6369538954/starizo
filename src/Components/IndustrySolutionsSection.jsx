@@ -32,7 +32,7 @@ export default function IndustrySolutionsSection() {
   };
 
   return (
-    <div className="font-[para]">
+    <div className="font-[para]  mt-30 ">
       {/* Hero Section */}
       <div
         className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"

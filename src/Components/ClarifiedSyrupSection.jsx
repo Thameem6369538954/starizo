@@ -59,7 +59,7 @@ export default function ClarifiedSyrupSection() {
   ];
 
   return (
-    <div className="font-[para] mt-20">
+    <div className="font-[para] mt-30">
       {/* Hero Section */}
       <div
         className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
@@ -142,76 +142,94 @@ export default function ClarifiedSyrupSection() {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
-<div className="bg-white rounded-xl shadow-xl max-w-8xl w-full max-h-[90vh] overflow-y-auto p-6 relative">
-<button
-              className="absolute top-2 right-3 text-gray-600 hover:text-black text-4xl"
-              onClick={() => setShowModal(false)}
-            >
-              &times;
-            </button>
-            <h3 className="text-2xl font-bold mb-4 text-gray-800">
-              STARIZO® Clarified Rice Syrup – Product Data Sheet
-            </h3>
+       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
+  <div className="bg-white rounded-xl shadow-xl max-w-8xl w-full max-h-[90vh] overflow-y-auto p-6 relative">
+    <button
+      className="absolute top-2 right-3 text-gray-600 hover:text-black text-4xl"
+      onClick={() => setShowModal(false)}
+    >
+      &times;
+    </button>
+    <h3 className="text-2xl font-bold mb-4 text-gray-800">
+      STARIZO® Clarified Rice Syrup – Product Data Sheet
+    </h3>
 
-            <div className="text-gray-700 space-y-4 text-base">
-              <h4 className="text-xl font-semibold">Specifications</h4>
-              <ul className="list-disc list-inside">
-                <li><strong>Appearance:</strong> Colourless thick viscous syrup</li>
-                <li><strong>pH (50% solution):</strong> 4.8 – 5.5</li>
-                <li><strong>Odor:</strong> Odorless</li>
-                <li><strong>Identification:</strong> Passes test</li>
-              </ul>
+    <div className="text-gray-700 space-y-4 text-base">
+      <p>
+        Clarified Rice Syrup produced from non-GMO rice starch via an enzymatic
+        process, this clear, thick, and viscous syrup offers a clean finish
+        with a subtle honey-like flavor, making it suitable for natural
+        sweetening and premium formulations.
+      </p>
 
-              <h4 className="text-xl font-semibold">Microbiological</h4>
-              <ul className="list-disc list-inside">
-                <li>Total plate count: 1000 Max</li>
-                <li>Yeast/Mold: 10 Max</li>
-                <li>E. coli / Salmonella: Absent</li>
-              </ul>
+      <h4 className="text-xl font-semibold">Specifications</h4>
+      <ul className="list-disc list-inside">
+        <li><strong>Appearance:</strong> Colourless thick viscous syrup</li>
+        <li><strong>pH (50% solution):</strong> 4.8 – 5.5</li>
+        <li><strong>Odour:</strong> Odourless</li>
+        <li><strong>Viscosity:</strong> NA</li>
+        <li><strong>Identification:</strong> Passes test</li>
+      </ul>
 
-              <h4 className="text-xl font-semibold">Nutrition Information (per 100g)</h4>
-              <ul className="list-disc list-inside">
-                <li>Energy: 316 Kcal</li>
-                <li>Carbohydrates: 79g</li>
-                <li>Total Fat: &lt;0.1g | Sugar: 19g</li>
-                <li>Dietary Fiber: 0g | Trans Fat: 0g | Saturated Fat: &lt;0.1g</li>
-                <li>Cholesterol: 0mg | Sodium: &lt;10mg</li>
-              </ul>
+      <h4 className="text-xl font-semibold">Microbiological</h4>
+      <ul className="list-disc list-inside">
+        <li>Total plate count (cfu/g): 1000 Max</li>
+        <li>Yeast (cfu/g): 10 Max</li>
+        <li>Mold (cfu/g): 10 Max</li>
+        <li>E. coli (per 10g): Absent</li>
+        <li>Salmonella (per 25g): Absent</li>
+      </ul>
 
-              <h4 className="text-xl font-semibold">Heavy Metals</h4>
-              <ul className="list-disc list-inside">
-                <li>Total Heavy Metals: 10 mg/kg Max</li>
-                <li>Arsenic: &lt;0.1 mg/kg | Lead: 0.05 mg/kg</li>
-                <li>Cadmium: 0.05 mg/kg | Mercury: 0.01 mg/kg</li>
-              </ul>
+      <h4 className="text-xl font-semibold">Nutrition Information (per 100g)</h4>
+      <ul className="list-disc list-inside">
+        <li>Energy (Kcal): 316</li>
+        <li>Total Carbohydrates: 79g</li>
+        <li>Total Fat: &lt;0.1g</li>
+        <li>Saturated Fat: &lt;0.1g</li>
+        <li>Trans Fat: 0g</li>
+        <li>Cholesterol: 0g</li>
+        <li>Sodium: &lt;10mg</li>
+        <li>Dietary Fibre: 0g</li>
+        <li>Sugar: 19g</li>
+      </ul>
 
-              <h4 className="text-xl font-semibold">Applications</h4>
-              <p>
-                Used in ice cream, beverages, yoghurts, desserts, pharmacy,
-                biscuits, sauces, baby foods, cosmetics, bakery, and more.
-              </p>
+      <h4 className="text-xl font-semibold">Heavy Metals Value</h4>
+      <ul className="list-disc list-inside">
+        <li>Total Heavy Metals: 10 mg/kg Max</li>
+        <li>Arsenic: &lt;0.1 mg/kg Max</li>
+        <li>Lead: 0.05 mg/kg Max</li>
+        <li>Cadmium: 0.05 mg/kg Max</li>
+        <li>Mercury: 0.01 mg/kg Max</li>
+      </ul>
 
-              <h4 className="text-xl font-semibold">Certifications To Be Acquired</h4>
-              <ol className="list-decimal list-inside">
-                <li>FSSC 22000: 2017</li>
-                <li>ISO 9001:2015</li>
-                <li>Halal-India/Indonesia</li>
-                <li>Kosher</li>
-                <li>FDA-IP/BP/USP</li>
-                <li>Non-GMO</li>
-                <li>NABL/ISO/IEC:2017 Accreditation</li>
-                <li>BRC</li>
-              </ol>
+      <h4 className="text-xl font-semibold">Regulations</h4>
+      <ul className="list-disc list-inside">
+        <li>Pesticide Residues: Complies with regulation (EC) 396/2005, as amended</li>
+        <li>Contaminants: Complies with regulation (EC) 1881/2006, as amended</li>
+      </ul>
 
-              <h4 className="text-xl font-semibold">Regulations</h4>
-              <p>
-                Pesticide Residues: Complies with EC 396/2005<br />
-                Contaminants: Complies with EC 1881/2006
-              </p>
-            </div>
-          </div>
-        </div>
+      <h4 className="text-xl font-semibold">Applications</h4>
+      <p>
+        Food: Ice Cream, Beverages, Yoghurts, Desserts, Pharmacy, Biscuits,
+        Breakfast Foods, Sauces, Baby Foods, Cosmetics, Bakery, Snacks,
+        Confectionery, Fruit-Based Preparations
+      </p>
+
+      <h4 className="text-xl font-semibold">Certifications: To Be Acquired</h4>
+      <ol className="list-decimal list-inside">
+        <li>FSSC 22000: 2017</li>
+        <li>ISO 9001:2015</li>
+        <li>Halal-India/Indonesia</li>
+        <li>Kosher</li>
+        <li>FDA-IP/BP/USP</li>
+        <li>Non-GMO</li>
+        <li>NABL/ISO/IEC:2017 Accreditation</li>
+        <li>BRC</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
       )}
     </div>
   );

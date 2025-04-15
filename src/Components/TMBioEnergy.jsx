@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import qq from "../Images/qq.png"
+import qq from "../Images/qq.jpg"
 const StarizoOverview = () => {
   return (
     <section
@@ -17,7 +17,7 @@ const StarizoOverview = () => {
         </motion.h2>
 
         <motion.p
-          className="text-2xl md:text-3xl text-gray-700 font-medium mb-12 p-5"
+          className="text-2xl md:text-3xl text-gray-700  text-center p-5 font-medium "
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}

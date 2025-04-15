@@ -1,7 +1,7 @@
 
 @font-face{
     font-family: "heading";
-    src: url("/public/Fonts/Chesion\ Display.ttf") format("truetype"); /* Update the path */
+    src: url("/public/Fonts/BebasNeue-Regular.ttf") format("truetype"); /* Update the path */
   font-weight: normal;
   font-style: normal;
 }
@@ -17,5 +17,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face{
+    font-family: "velen";
+    src: url("/public/Fonts/The\ Valentino.ttf") format("truetype"); /* Update the path */
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 

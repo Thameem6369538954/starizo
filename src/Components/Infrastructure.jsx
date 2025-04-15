@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import riceMillImg from "../Images/Mill.jfif";
 import labImg from "../Images/Lab.jfif";
 import rndImg from "../Images/rnd.jpg";
+import kk from "../Images/bowl-with-pills-table.jpg"
+import InfoSection from "../Components/InfoSection" 
 
 const Infrastructure = () => {
   const fadeIn = {
@@ -10,7 +12,9 @@ const Infrastructure = () => {
   };
 
   return (
-    <div className="p-6 bg-white text-gray-900 font-[para]">
+    <div className="p-6 bg-white text-gray-900 font-[para]" 
+    style={{backgroundImage:`url(${kk})`}}
+    >
       <motion.h1
         className="text-4xl md:text-8xl tracking-wide font-bold text-center text-gray-800 mb-12 font-[Heading]"
         initial={{ opacity: 0, y: -50 }}
@@ -76,6 +80,7 @@ const Infrastructure = () => {
           </div>
         </motion.div>
       </div>
+      <InfoSection />
     </div>
   );
 };
