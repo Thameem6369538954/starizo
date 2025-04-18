@@ -7,6 +7,7 @@ import ClarifiedSyrupSection from '../Components/ClarifiedSyrupSection'
 import IndustrySolutionsSection from '../Components/IndustrySolutionsSection'
 import MaltoExtrin from '../Components/MaltoExtrin'
 import HighMaltoseRiceSyrupSection from '../Components/HighMaltoseRiceSyrupSection'
+import NotFound from '../Components/NotFound'
 
 const AllRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AllRoutes = () => {
         <Route path='/IndustrySolutionsSection' element={<IndustrySolutionsSection />} />
         <Route path='/MaltoExtrin' element={<MaltoExtrin />} />
         <Route path='/HighMaltoseRiceSyrupSection' element={<HighMaltoseRiceSyrupSection />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
           </div>
   )

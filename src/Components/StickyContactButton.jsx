@@ -20,22 +20,22 @@ const StickyContactButton = () => {
         } bg-white shadow-xl rounded-xl px-5 py-3 text-gray-800 text-sm font-medium space-y-2`}
       >
         <div>
-          <p className="font-semibold text-blue-600">Thameem</p>
-          <a href="tel:+919876543210" className="hover:underline block">
-            +91 98765 43210
+          <p className="font-semibold text-blue-600">Ramesh Kumar</p>
+          <a href="tel:+918141166866" className="hover:underline block">
+          +91 81411 66866
           </a>
         </div>
         <div>
-          <p className="font-semibold text-blue-600">Rahul</p>
-          <a href="tel:+919812345678" className="hover:underline block">
-            +91 98123 45678
+          <p className="font-semibold text-blue-600">Vijai Anand</p>
+          <a href="tel:+918141166866" className="hover:underline block">
+          +91 81411 66866
           </a>
         </div>
       </div>
 
       {/* Main Contact Button */}
       <Link
-        to="/contact"
+        // to="/contact"
         className="flex items-center gap-2 px-5 py-3 bg-blue-600 text-white font-medium text-sm md:text-base rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 font-[para]"
       >
         <MessageSquare size={20} className="animate-pulse" />

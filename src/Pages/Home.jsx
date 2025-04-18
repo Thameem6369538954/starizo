@@ -9,12 +9,14 @@ import Cate from "../Components/Cate"
 import ContactUs from '../Components/ContactUs'
 import TMBioEnergy from '../Components/TMBioEnergy'
 import TripleAAA from '../Components/TripleAAA'
+import QualityCompliance from '../Components/QualityCompliance'
 const Home = () => {
   return (
     <div>
       <Header />
       <AboutUs />
       <TMBioEnergy />
+      <QualityCompliance />
       {/* <TripleAAA /> */}
       <VisionMission />
       <Cate />
