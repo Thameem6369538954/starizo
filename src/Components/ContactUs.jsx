@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 
 export default function ContactUs() {
   return (
-    <div className="bg-white font-[para]">
+    <div className="bg-white font-[para]"
+    id="con-section"
+    >
          <motion.h1
         className="text-5xl md:text-8xl tracking-wide font-bold text-center text-gray-800 mb-7 font-[Heading]"
         initial={{ opacity: 0, y: -50 }}

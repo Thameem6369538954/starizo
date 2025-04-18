@@ -6,7 +6,8 @@ import Fora from "../Images/yellow-rice-seeds-cup-concrete.jpg"; // Replace with
 const AboutUs = () => {
   return (
     <div className="bg-white py-16 px-6 md:px-12 bg-center bg-cover "
-    style={{backgroundImage:`url(${Fora})`}}
+    // style={{backgroundImage:`url(${Fora})`}}
+    id="about-section"
     >
       {/* Heading */}
       <motion.h1

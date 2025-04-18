@@ -3,7 +3,9 @@ import './App.css';
 import AllRoutes from './AllRouters/AllRoutes';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import Loading from './Components/Loading'; // <- Import the loader
+import Loading from './Components/Loading'; // <- Import the loader 
+import StickyContactButton from "./Components/StickyContactButton"
+import TopUpButton from './Components/TopUpButton';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +27,8 @@ function App() {
           <Navbar />
           <AllRoutes />
           <Footer />
+          <StickyContactButton />
+          <TopUpButton />
         </div>
       )}
     </>

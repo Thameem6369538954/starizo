@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import BG from "../Images/HeaderBg.jpg";
+import BG from "../Images/HeaderBg.png";
 import BGN from "../Images/Screenshot_2025-04-15_174411-removebg-preview.png";
 
 const textVariants = {
@@ -33,20 +33,20 @@ const Header = () => {
   return (
     <div
       className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center px-4 sm:px-6 md:px-12 lg:px-20"
-      style={{ backgroundImage: `url(${BG})` }}
+      // style={{ backgroundImage: `url(${BG})` }}
     >
       {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 w-full max-w-7xl mx-auto p-6 mt-50 md:mt-25 lg:mt-0">
         {/* Left - Text */}
-        <div className="text-white text-center md:text-left space-y-4 md:space-y-6">
+        <div className=" text-center md:text-left space-y-4 md:space-y-6">
           <motion.h1
-            className="text-6xl sm:text-5xl md:text-7xl lg:text-8xl font-[heading] text-[#00a63e]"
+            className="text-6xl sm:text-5xl md:text-7xl lg:text-8xl font-[heading] "
             custom={1}
             initial="hidden"
             animate="visible"
             variants={textVariants}
           >
-            <span className="text-[#00a63e] text-6xl sm:text-9xl">H</span>arnessing Rice{" "}
+            <span className="text-6xl sm:text-9xl">H</span>arnessing Rice{" "}
             <span className="text-yellow-400 text-6xl sm:text-9xl">S</span><span className="text-yellow-400">ustainably</span>
           </motion.h1>
 
@@ -72,7 +72,7 @@ const Header = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.2 }}
-            className="mt-4 bg-white text-yellow-600 px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-[para] font-semibold hover:bg-yellow-600 hover:text-white transition"
+            className="mt-4 bg-white border border-[#fdc700] tracking-wideer text-yellow-600 px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-[para] font-semibold hover:bg-yellow-600 hover:text-white transition"
             custom={3}
             initial="hidden"
             animate="visible"

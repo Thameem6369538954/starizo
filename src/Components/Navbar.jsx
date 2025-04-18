@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../Images/logo.png";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,13 +51,23 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between p-4 font-[para]">
         <Link to="/" onClick={handleLinkClick}>
-          <img src={logo} alt="Logo" className="w-36" />
+          <img src={logo} alt="Logo" className="w-66" />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center text-black font-medium text-xl">
           <Link to="/" className="hover:text-gray-500" onClick={handleLinkClick}>Home</Link>
-          <Link to="/about" className="hover:text-gray-500" onClick={handleLinkClick}>About Us</Link>
+          <ScrollLink
+  to="about-section"
+  smooth={true}
+  duration={800}
+  offset={-150} // Adjust based on your fixed navbar height
+  className="hover:text-gray-500 cursor-pointer"
+  onClick={handleLinkClick}
+>
+          <Link className="hover:text-gray-500" onClick={handleLinkClick}>About Us</Link>
+</ScrollLink>
+
 
           {/* Services Dropdown */}
           <div
@@ -71,9 +82,19 @@ const Navbar = () => {
               }, 150);
             }}
           >
+             <ScrollLink
+  to="pro-section"
+  smooth={true}
+  duration={1200}
+  offset={-150} // Adjust based on your fixed navbar height
+  className="hover:text-gray-500 cursor-pointer"
+  onClick={handleLinkClick}
+>
+
             <button className="flex items-center gap-1 hover:text-gray-500">
-              Services <ChevronDown size={16} />
+              Our Product<ChevronDown size={16} />
             </button>
+</ScrollLink>
 
             <AnimatePresence>
               {isServicesOpen && (
@@ -93,10 +114,17 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </div>
-
-          <Link to="/menus" className="hover:text-gray-500" onClick={handleLinkClick}>Menus</Link>
-          <Link to="/contact" className="hover:text-gray-500" onClick={handleLinkClick}>Contact</Link>
-
+        
+          <ScrollLink
+  to="con-section"
+  smooth={true}
+  duration={1200}
+  offset={-190} // Adjust based on your fixed navbar height
+  className="hover:text-gray-500 cursor-pointer"
+  onClick={handleLinkClick}
+>
+          <Link className="hover:text-gray-500" onClick={handleLinkClick}>Contact</Link>
+          </ ScrollLink >
           <button onClick={() => setSearchOpen((prev) => !prev)} className="hover:text-gray-500">
             <Search size={20} />
           </button>

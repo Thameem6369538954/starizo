@@ -6,7 +6,7 @@ const VisionMissionValues = () => {
   return (
     <div
   className="px-6 md:px-12 lg:px-24 py-12 bg-white font-[para] bg-fixed bg-cover bg-center"
-  style={{ backgroundImage: `url(${As})` }}
+  // style={{ backgroundImage: `url(${As})` }}
 >
 
          <motion.h1

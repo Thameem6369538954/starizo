@@ -13,7 +13,7 @@ const Infrastructure = () => {
 
   return (
     <div className="p-6 bg-white text-gray-900 font-[para]" 
-    style={{backgroundImage:`url(${kk})`}}
+    // style={{backgroundImage:`url(${kk})`}}
     >
       <motion.h1
         className="text-4xl md:text-8xl tracking-wide font-bold text-center text-gray-800 mb-12 font-[Heading]"

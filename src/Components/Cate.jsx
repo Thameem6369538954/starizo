@@ -20,8 +20,9 @@ const products = [
     id: 1,
     image: PB,
     title: "Rice Protein Concentrate (80% Protein)",
-    location: "Plant-Powere@ Nutrition, Uncompromise@ Performance",
+    location: "Plant-Powered Nutrition, Uncompromised Performance",
     date: "Specifications: (Chemical & Physical)",
+    description: "Emphasize health benefits (muscle recovery, cardiac health) and applications (sports nutrition). Highlight solubility features.",
     link: "/RiceProteinCard",
   },
   {
@@ -30,6 +31,7 @@ const products = [
     title: "Rice Maltodextrin",
     location: "The Multi-Functional Workhorse",
     date: "Specifications: (Chemical & Physical)",
+    description: "Stress versatility as a thickener/stabilizer in food/pharma. Add details like DE value.",
     link: "/MaltoExtrin",
   },
   {
@@ -38,6 +40,7 @@ const products = [
     title: "High Maltose Rice Syrup",
     location: "Redefining Sweetening Solutions",
     date: "Specifications: (Chemical & Physical)",
+    description: "A sweetener with a high maltose content, perfect for creating healthier food and beverage options.",
     link: "/HighMaltoseRiceSyrupSection",
   },
   {
@@ -46,6 +49,7 @@ const products = [
     title: "Rice Starch",
     location: "The Clean-Label Texture Innovator",
     date: "Specifications: (Chemical & Physical)",
+    description: "Highlight functional benefits (thickening, fat replacement) and applications (bakery, pharma). Include technical specifications like amylose content.",
     link: "/StarizoStarchCard",
   },
   {
@@ -54,14 +58,16 @@ const products = [
     title: "Clarified Rice Syrup",
     location: "Pure Sweetness, Enhanced Functionality",
     date: "Specifications: (Chemical & Physical)",
+    description: "Stress versatility as a thickener/stabilizer in food/pharma. Add details like DE value.",
     link: "/ClarifiedSyrupSection",
   },
   {
     id: 6,
     image: AD,
-    title: "lndtstry-Specific Solutions",
+    title: "Industry-Specific Solutions",
     location: "Tailored for Your Market",
     date: "Specifications: (Chemical & Physical)",
+    description: "Custom solutions for various industries, designed to meet specific needs and challenges.",
     link: "/IndustrySolutionsSection",
   },
 ];
@@ -78,7 +84,8 @@ export default function ProductCarousel() {
   return (
     <div
       className="min-h-screen py-20 px-4 bg-cover bg-center font-[para]"
-      style={{ backgroundImage: `url(${bg})` }}
+      // style={{ backgroundImage: `url(${bg})` }}
+      id="pro-section"
     >
       <h1 className="text-4xl md:text-8xl font-bold text-center text-gray-800 mb-16 font-[Heading]">
         OUR <span className="text-[#fdc700]">PRODUCTS</span>
@@ -118,6 +125,9 @@ export default function ProductCarousel() {
                 </h2>
                 <p className="text-sm text-gray-600 mb-4 line-clamp-3">
                   {product.location}
+                </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  {product.description}
                 </p>
                 <span className="text-xs font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
                   {product.date}

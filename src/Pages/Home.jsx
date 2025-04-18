@@ -8,12 +8,14 @@ import BrandShowcase from "../Components/BrandShowcase"
 import Cate from "../Components/Cate"
 import ContactUs from '../Components/ContactUs'
 import TMBioEnergy from '../Components/TMBioEnergy'
+import TripleAAA from '../Components/TripleAAA'
 const Home = () => {
   return (
     <div>
       <Header />
       <AboutUs />
       <TMBioEnergy />
+      {/* <TripleAAA /> */}
       <VisionMission />
       <Cate />
       <Infrastructure />
