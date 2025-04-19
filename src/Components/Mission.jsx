@@ -10,12 +10,12 @@ const VisionMissionValues = () => {
 >
 
          <motion.h1
-                className="text-5xl md:text-8xl tracking-wide font-bold text-center text-[#fdc700]   mb-8 font-[Heading]"
+                className="text-5xl md:text-8xl tracking-wide font-bold text-center text-[#28563a]   mb-8 font-[Heading]"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-              VISION <span className="text-white">& </span><span className="text-gray-800"> Mission</span>
+              VISION <span className="text-[#d58226]">& </span><span className="text-gray-800"> Mission</span>
               </motion.h1>
         
       {/* Vision & Mission Section */}
@@ -38,7 +38,7 @@ const VisionMissionValues = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="p-6 bg-white shadow-lg rounded-lg"
         >
-          <h2 className="text-xl font-bold text-[#fdc700] border-b pb-2">MISSION</h2>
+          <h2 className="text-xl font-bold text-[#28563a] border-b pb-2">MISSION</h2>
           <p className="text-gray-700 mt-4">
           To drive operational excellence, ethical practices, and breakthrough innovation in the food ingredient sector, establishing enduring partnerships grounded in mutual growth and value creation.          </p>
         </motion.div>

@@ -54,7 +54,7 @@ const StarizoOverview = () => {
       <div className="relative max-w-7xl mx-auto text-center z-10 font-[para]">
         {/* Brand Intro Section */}
         <motion.h2
-          className="text-5xl md:text-7xl font-extrabold font-[Heading] text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 drop-shadow-lg"
+          className="text-5xl md:text-7xl font-extrabold font-[Heading] text-[#28563a] drop-shadow-lg"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
@@ -115,7 +115,7 @@ const StarizoOverview = () => {
                 viewport={{ once: true }}
                 custom={index}
               >
-                <h4 className="text-2xl font-bold text-pink-600 mb-6">
+                <h4 className="text-2xl font-bold text-[#28563a] mb-6">
                   {item.title}
                 </h4>
                 <p className="text-lg text-gray-700 leading-relaxed">{item.content}</p>

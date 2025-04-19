@@ -19,8 +19,8 @@ export default function Certifications() {
   return (
     <div className="bg-white py-10 px-5 font-[para]">
       <div className="flex items-center gap-2 mb-5">
-        <FaCertificate className="text-green-600 text-2xl" />
-        <h2 className="text-xl font-bold text-green-600">CERTIFICATIONS</h2>
+        <FaCertificate className="text-[#28563a] text-2xl" />
+        <h2 className="text-xl font-bold text-[#28563a]">CERTIFICATIONS</h2>
       </div>
       <div className="overflow-hidden w-full relative">
         <motion.div

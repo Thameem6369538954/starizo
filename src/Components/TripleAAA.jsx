@@ -21,7 +21,7 @@ const TripleAAA = () => {
           animate={{ opacity: 1, y: 0 }}  // Final state: fully visible and in original position
           transition={{ duration: 0.6 }}  // Duration of the animation
         >
-          <h3 className="text-3xl font-semibold text-[#fdc700] mb-4">Availability</h3>
+          <h3 className="text-3xl font-semibold text-[#28563a] mb-4">Availability</h3>
           <p className="text-lg text-gray-700">
             Secure supply chain with direct farmer relationships, ensuring consistent and reliable delivery.
           </p>
@@ -51,7 +51,7 @@ const TripleAAA = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-3xl font-semibold text-[#fdc700] mb-4">Affordability</h3>
+          <h3 className="text-3xl font-semibold text-[#28563a] mb-4">Affordability</h3>
           <p className="text-lg text-gray-700">
             Optimized pricing through vertical integration and biomass energy.
           </p>
@@ -81,7 +81,7 @@ const TripleAAA = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-3xl font-semibold text-[#fdc700] mb-4">(Third Principle)</h3>
+          <h3 className="text-3xl font-semibold text-[#28563a] mb-4">(Third Principle)</h3>
           <p className="text-lg text-gray-700">
             Add another principle here if needed (e.g., Accessibility, Assurance, etc.).
           </p>

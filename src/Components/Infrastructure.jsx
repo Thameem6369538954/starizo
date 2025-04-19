@@ -22,7 +22,7 @@ const Infrastructure = () => {
         transition={{ duration: 0.8 }}
       >
         OUR{" "}
-        <span className="text-[#fdc700] text-2xl md:text-8xl">
+        <span className="text-[#28563a] text-2xl md:text-8xl">
           INFRASTRUCTURE
         </span>
       </motion.h1>
@@ -38,7 +38,7 @@ const Infrastructure = () => {
         >
           <img src={riceMillImg} alt="Rice Mill" className="h-48 w-full object-cover" />
           <div className="p-6">
-            <h3 className="text-xl font-bold text-green-700">🏭 STATE-OF-THE-ART RICE MILL</h3>
+            <h3 className="text-xl font-bold text-[#28563a]">🏭 STATE-OF-THE-ART RICE MILL</h3>
             <p className="mt-3 text-gray-700">
               Our advanced rice mill boasts an output capacity of 550 MT per day, fully automated
               for precision and efficiency. We adhere to MR1 standards, ensuring high-quality production.
@@ -73,7 +73,7 @@ const Infrastructure = () => {
         >
           <img src={rndImg} alt="R&D" className="h-48 w-full object-cover" />
           <div className="p-6">
-            <h3 className="text-xl font-bold text-blue-700">🔍 R&D CENTRE</h3>
+            <h3 className="text-xl font-bold text-[#28563a]">🔍 R&D CENTRE</h3>
             <p className="mt-3 text-gray-700">
               Our Food Application Development Centre enables clients to conduct experiments and drive innovation.
             </p>

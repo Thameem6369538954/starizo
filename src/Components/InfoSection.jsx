@@ -22,7 +22,7 @@ const AnimatedComponent = () => {
             alt="Formulation"
             className="w-full h-60 object-cover rounded-lg mb-3"
           />
-          <h2 className="text-green-700 text-2xl font-bold flex items-center gap-2">
+          <h2 className="text-[#28563a] text-2xl font-bold flex items-center gap-2">
             <FaFlask /> FORMULATION
           </h2>
           <p className="text-gray-700">
@@ -52,7 +52,7 @@ const AnimatedComponent = () => {
             alt="Compliance"
             className="w-full h-40 object-cover rounded-lg mb-3"
           />
-          <h2 className="text-green-700 text-2xl font-bold flex items-center gap-2">
+          <h2 className="text-[#28563a] text-2xl font-bold flex items-center gap-2">
             COMPLIANCES & DECLARATIONS
           </h2>
           <ul className="mt-2 space-y-2 text-gray-700">

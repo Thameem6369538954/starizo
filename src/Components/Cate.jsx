@@ -88,7 +88,7 @@ export default function ProductCarousel() {
       id="pro-section"
     >
       <h1 className="text-4xl md:text-8xl font-bold text-center text-gray-800 mb-16 font-[Heading]">
-        OUR <span className="text-[#fdc700]">PRODUCTS</span>
+        OUR <span className="text-[#28563a]">PRODUCTS</span>
       </h1>
 
       <Swiper

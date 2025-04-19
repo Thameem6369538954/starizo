@@ -13,7 +13,7 @@ export default function ContactUs() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        GET IN  <span className="text-[#fdc700]">TOUCH
+        GET IN  <span className="text-[#28563a]">TOUCH
         </span>
       </motion.h1>
       {/* Contact Section */}

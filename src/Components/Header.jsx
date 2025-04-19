@@ -40,14 +40,14 @@ const Header = () => {
         {/* Left - Text */}
         <div className=" text-center md:text-left space-y-4 md:space-y-6">
           <motion.h1
-            className="text-6xl sm:text-5xl md:text-7xl lg:text-8xl font-[heading] "
+            className="text-6xl sm:text-5xl md:text-7xl lg:text-8xl font-[heading] text-[#28563a]"
             custom={1}
             initial="hidden"
             animate="visible"
             variants={textVariants}
           >
             <span className="text-6xl sm:text-9xl">H</span>arnessing Rice{" "}
-            <span className="text-yellow-400 text-6xl sm:text-9xl">S</span><span className="text-yellow-400">ustainably</span>
+            <span className="text-[#d58226] text-6xl sm:text-9xl">S</span><span className="text-[#d58226]">ustainably</span>
           </motion.h1>
 
           <motion.p

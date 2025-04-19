@@ -11,12 +11,12 @@ const AboutUs = () => {
     >
       {/* Heading */}
       <motion.h1
-        className="text-5xl md:text-8xl tracking-wide font-bold text-center text-gray-800  font-[Heading]"
+        className="text-5xl md:text-8xl tracking-wide font-bold text-center   font-[Heading] text-[#28563a]"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        About <span className="text-[#fdc700]">Us</span>
+        About <span className="text-black">Us</span>
       </motion.h1>
 
       {/* Main Content */}
