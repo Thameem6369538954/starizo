@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import SyrupImg from "../Images/closeup-mixed-rice.jpg"; // Replace with your actual image path
+import SyrupImg from "../Images/Starizo_Web_Banner_1899x501-04.jpg"; // Replace with your actual image path
 
 export default function ClarifiedSyrupSection() {
   const [showModal, setShowModal] = useState(false);
@@ -62,10 +62,10 @@ export default function ClarifiedSyrupSection() {
     <div className="font-[para] mt-30">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${SyrupImg})` }}
+        className="relative w-full  bg-cover bg-center flex items-center justify-center"
+        // style={{ backgroundImage: `url(${SyrupImg})` }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,8 @@ export default function ClarifiedSyrupSection() {
           >
             Pure Sweetness, Enhance Functionality
           </motion.p>
-        </motion.div>
+        </motion.div> */}
+        <img src={SyrupImg} alt="" />
       </div>
 
       {/* Cards Section */}

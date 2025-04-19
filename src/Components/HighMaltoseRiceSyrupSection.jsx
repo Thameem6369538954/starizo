@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Ak from "../Images/tahini-sesame-seeds-dark-background.jpg";
+import Ak from "../Images/Starizo_Web_Banner_1899x501-05.jpg";
 
 export default function SplitSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,13 +37,13 @@ export default function SplitSection() {
   };
 
   return (
-    <div className="font-[para] mt-30 ">
+    <div className="font-[para] mt-35 ">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${Ak})` }}
+        className="relative w-full  bg-cover bg-center flex items-center justify-center"
+        // style={{ backgroundImage: `url(${Ak})` }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,8 @@ export default function SplitSection() {
             protein concentrate with 80% protein content for health and
             functionality.
           </motion.p>
-        </motion.div>
+        </motion.div> */}
+        <img src={Ak} alt="" />
       </div>
 
       {/* Cards Section */}

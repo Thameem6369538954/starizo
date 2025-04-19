@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Ak from "../Images/tahini-sesame-seeds-dark-background.jpg";
+import Ak from "../Images/Starizo_Web_Banner_1899x501-01.jpg";
 
 export default function SplitSectionStarch() {
   const [showModal, setShowModal] = useState(false);
@@ -45,13 +45,13 @@ export default function SplitSectionStarch() {
   ];
 
   return (
-    <div className="font-[para]  mt-30 ">
+    <div className="font-[para] mt-35">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${Ak})` }}
+        className="relative w-full bg-cover bg-center flex items-center justify-center"
+        // style={{ backgroundImage: `url(${})` }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,8 @@ export default function SplitSectionStarch() {
           >
             The Clean-Label Texture Innovator
           </motion.p>
-        </motion.div>
+        </motion.div> */}
+        <img src={Ak} alt="" />
       </div>
 
       {/* Cards Section */}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import RiceImg from "../Images/Bg.png";
+import RiceImg from "../Images/Starizo_Web_Banner_1899x501-03.jpg";
 import { X } from "lucide-react";
 
 export default function RiceMaltodextrinSection() {
@@ -49,10 +49,10 @@ export default function RiceMaltodextrinSection() {
     <div className="font-[para]  mt-30 ">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${RiceImg})` }}
+        className="relative w-full  bg-cover bg-center flex items-center justify-center"
+        // style={{ backgroundImage: `url(${RiceImg})` }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,8 @@ export default function RiceMaltodextrinSection() {
           >
             The Clean-Label Texture Innovator
           </motion.p>
-        </motion.div>
+        </motion.div> */}
+        <img src={RiceImg} alt="" />
       </div>
 
       {/* Cards Section */}
